@@ -1,4 +1,3 @@
-<?php require_once 'includes/helpers.php'; ?>
 
 <!--   BARRA LATERAL  -->
 
@@ -19,9 +18,9 @@
 
 
             <a href="cerrar-sesion.php" class="boton boton-verde">Crear entradas</a>
-            <a href="cerrar-sesion.php" class="boton boton-verde">Crear categorias</a>
+            <a href="cerrar-sesion.php" class="boton">Crear categoria</a>
             <a href="cerrar-sesion.php" class="boton boton-naranja">Mis datos</a>
-            <a href="cerrar-sesion.php" class="boton">Cerrar sesión</a>
+            <a href="cerrar-sesion.php" class="boton boton-rojo">Cerrar sesión</a>
 
         </div>
 
