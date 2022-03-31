@@ -5,6 +5,8 @@
 
     if (isset($_POST)) {
 
+    //CONEXION A LA BASE DE DATOS
+
     require_once 'includes/conexion.php';
 
     //      GENERAMOS UNA SESIÓN

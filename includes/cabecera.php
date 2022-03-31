@@ -21,7 +21,7 @@
         <div id="logo">
 
             <a href="index.php">
-                Blog de Videojuegos
+                Mi blog de Videojuegos
             </a>
 
         </div>
@@ -38,19 +38,26 @@
                 <?php 
 
                 $categorias=conseguirCategorias($conexion);
+
+                if(!empty($categorias)) :
                 
-                while($categoria=mysqli_fetch_assoc($categorias)) : 
+                    while($categoria=mysqli_fetch_assoc($categorias)) : 
                 
                 ?>
 
-                <li>
-                    <a href="categoria.php?id=<?=$categoria['id']?>"> 
-                        <?=$categoria['nombre']?>
-                    </a>
-                </li>
+                    <li>
+                        <a href="categoria.php?id=<?=$categoria['id']?>"> 
+                            <?=$categoria['nombre']?>
+                        </a>
+                    </li>
 
 
-                <?php endwhile; ?>
+                <?php
+                
+                    endwhile;
+                   endif;              
+                ?>
+
 
                 <li>
                     <a href="index.php">Sobre nosotros</a>
@@ -60,6 +67,10 @@
                 </li>
             </ul>
         </nav>
+
+        
+        <!-- FIN DEL MENÚ   -->
+
     </header>
 
     <div id="contenedor">

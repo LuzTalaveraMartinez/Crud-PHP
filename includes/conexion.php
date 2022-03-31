@@ -22,7 +22,9 @@ mysqli_set_charset($conexion, "utf8"); //Para que me reconozca todo tipo de cara
 
 //Iniciamos la sesión 
 
-session_start();
+if(!isset($_SESSION)){
+    session_start();
+}
 
 
 ?>

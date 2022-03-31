@@ -11,11 +11,13 @@ require_once 'includes/lateral.php';
 <!--  DIV PRINCIPAL  -->
 
 <div id="principal">
-    <h1>Ultímas entradas</h1>
+
+    <h1>Todas las entradas</h1>
+
 
     <?php
 
-    $entradas = conseguirEntradas($conexion, true);
+    $entradas = conseguirEntradas($conexion);
 
     if (!empty($entradas)) :
 
@@ -24,7 +26,8 @@ require_once 'includes/lateral.php';
     ?>
 
             <article class="entrada">
-                <a href="entrada.php?id=<?=$entrada['id']?>">
+
+                <a href="entrada.php?id=<?= $entrada['id'] ?>">
 
                     <h2>
                         <?= $entrada['titulo'] ?>
@@ -46,10 +49,6 @@ require_once 'includes/lateral.php';
     endif;
     ?>
 
-
-    <div id="ver-todas">
-        <a href="entradas.php">Ver todas las entradas</a>
-    </div>
 </div>
 
 <!--DIV FIN PRINCIPAL-->

@@ -1,5 +1,14 @@
 <?php
 
+require_once 'includes/conexion.php';
+require_once 'includes/helpers.php';
+
+ $categoria_actual=conseguirCategoria($conexion, $_GET['id']);
+
+if(!isset($categoria_actual['id'])){
+    header('Location: index.php');
+}
+
 require_once 'includes/cabecera.php';
 require_once 'includes/lateral.php';
 
@@ -11,13 +20,16 @@ require_once 'includes/lateral.php';
 <!--  DIV PRINCIPAL  -->
 
 <div id="principal">
-    <h1>Ultímas entradas</h1>
+
+
+    <h1>Entradas de <?=$categoria_actual['nombre']?></h1>
+    
 
     <?php
 
-    $entradas = conseguirEntradas($conexion, true);
+    $entradas = conseguirEntradas($conexion, null, $_GET['id']);
 
-    if (!empty($entradas)) :
+    if (!empty($entradas) && mysqli_num_rows($entradas) >=1) :
 
         while ($entrada = mysqli_fetch_array($entradas)) :
 
@@ -43,13 +55,12 @@ require_once 'includes/lateral.php';
 
     <?php
         endwhile;
-    endif;
+    else:
     ?>
+    <div class="alerta">No hay entradas en esta categoría</div>
 
+    <?php endif; ?>
 
-    <div id="ver-todas">
-        <a href="entradas.php">Ver todas las entradas</a>
-    </div>
 </div>
 
 <!--DIV FIN PRINCIPAL-->
