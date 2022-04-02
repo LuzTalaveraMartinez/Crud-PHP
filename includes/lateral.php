@@ -3,6 +3,25 @@
 
 <aside id="sidebar">
 
+    <!-- BUSCADOR -->
+
+    <div id="buscador" class="bloque">
+
+        <h3>Buscar</h3>
+
+        <form action="buscar.php" method="POST">
+
+            <input type="text" name="busqueda"><br>
+            <input type="submit" value="Buscar" />
+
+        </form>
+
+    </div>
+
+    <!-- FIN DEL BUSCADOR -->
+
+
+
 
     <!-- Comprobamos si existe el usuario -->
 
@@ -10,6 +29,7 @@
 
 
         <div id="usuario-logueado" class="bloque">
+
             <h3>
                 Hola, <?= $_SESSION['usuario']['nombre'] . ' ' . $_SESSION['usuario']['apellidos']; ?>
             </h3>
