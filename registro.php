@@ -1,9 +1,9 @@
 <?php
 
-    //      VERIFICAMOS QUE NOS VENGAS DATOS POR POST
+//      VERIFICAMOS QUE NOS VENGAS DATOS POR POST
 
 
-    if (isset($_POST)) {
+if (isset($_POST)) {
 
     //CONEXION A LA BASE DE DATOS
 
@@ -11,7 +11,7 @@
 
     //      GENERAMOS UNA SESIÓN
 
-    if(!isset($_SESSION)){ //Cuando no existe $_SESSION la creamos y la sesion se iniciaria si no la hubieramos iniciado
+    if (!isset($_SESSION)) { //Cuando no existe $_SESSION la creamos y la sesion se iniciaria si no la hubieramos iniciado
         session_start();
     }
 
@@ -111,6 +111,6 @@
     //var_dump($errores); // Van aparecer los errores  encontrados
 }
 
-        // REDIRECCIONAMOS AL INDEX.PHP
+// REDIRECCIONAMOS AL INDEX.PHP
 
 header('Location: index.php');

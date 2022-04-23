@@ -24,6 +24,12 @@ function borrarErrores(){
         $borrado= true;
     }
 
+    if(isset($_SESSION['errores_categoria'])){
+        $_SESSION['errores_categoria'] = null;
+        $borrado= true;
+    }
+
+
     if(isset($_SESSION['completado'])){
         $_SESSION['completado'] = null;
         $borrado= true;
@@ -118,11 +124,17 @@ function conseguirEntradas($conexion, $limit=null, $categoria=null, $busqueda=nu
         $sql .="WHERE e.categoria_id = $categoria ";
     }
 
+        // Comprobamos si la variable $busqueda viene vacia o tiene un valor que no sea string
+
     if(!empty($busqueda)){
         $sql .="WHERE e.titulo LIKE '%$busqueda%' ";
     }
 
+        // Le añadimos un ORDER BY y le digo que me los ordene DESC
+
     $sql .=" ORDER BY e.id DESC ";
+
+        // Comprobamos si la variable $limit viene vacia o tiene un valor que no sea string
 
     if($limit){
         // Equivalente a Sql = $sql."LIMIT 4"; a la sentencia de sql le concatenamos el LIMIT         

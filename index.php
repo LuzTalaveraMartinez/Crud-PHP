@@ -13,15 +13,6 @@ require_once 'includes/lateral.php';
 <div id="principal">
     <h1>Ultímas entradas</h1>
 
-    <?php
-
-    $entradas = conseguirEntradas($conexion, true);
-
-    if (!empty($entradas)) :
-
-        while ($entrada = mysqli_fetch_array($entradas)) :
-
-    ?>
 
             <article class="entrada">
                 <a href="entrada.php?id=<?=$entrada['id']?>">
@@ -40,11 +31,10 @@ require_once 'includes/lateral.php';
 
                 </a>
             </article>
+            }
 
-    <?php
-        endwhile;
-    endif;
-    ?>
+
+            
 
 
     <div id="ver-todas">
