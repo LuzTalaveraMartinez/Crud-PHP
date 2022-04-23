@@ -42,11 +42,11 @@ if (isset($_POST)) {
             $sql= "UPDATE entradas SET titulo='$titulo', descripcion='$descripcion', categoria_id=$categoria ".
                 " WHERE id= $entrada_id AND usuario_id =$usuario_id";         
         }else{
-            $sql= "INSERT INTO entradas VALUES(null, '$usuario', '$categoria', '$titulo', '$descripcion', CURDATE());";   
+            $sql= "INSERT INTO entradas VALUES(null, '$usuario', '$categoria', '$titulo', '$descripcion', CURDATE());"; 
         }
 
         $guardar= mysqli_query($conexion, $sql);
-        header("Location: index.php");
+        header("Location: index.php"); // Una vez aguardados mis datos
 
     }else{
         
@@ -56,8 +56,7 @@ if (isset($_POST)) {
             header("Location: editar-entradas.php?id=".$_GET['editar']);
         }
         header("Location: crear-entradas.php");
-    }
 
 }
 
-
+}

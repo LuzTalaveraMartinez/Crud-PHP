@@ -17,7 +17,8 @@
 
         <label for="nombre">Nombre de la categoria: </label>
         <input type="text" name="nombre"><br>
-        <input type="submit" value="Guardar">
+        <input type="submit" value="Guardar Categoria">
+        <input type="submit" value="Borrar Categoria">
     </form>
 
 </div>

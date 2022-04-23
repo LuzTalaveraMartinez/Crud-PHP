@@ -7,7 +7,7 @@
 
 
 <footer id="pie">
-    <p>Desarrollado por Luz Talavera Martínez&copy; 2022</p>
+    <p>Desarrollado por Luz Talavera Martínez &copy; 2022</p>
 </footer>
 
 

@@ -23,7 +23,9 @@
 }
 
 body {
-    background: url(../img/cubes.png) #F4F4F4;
+    background: url("../img/fondo-galaxia.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .alerta {
@@ -70,7 +72,7 @@ body {
     font-family: "fajala", Helvetica;
     font-size: 40px;
     letter-spacing: 2px;
-    color: #2979CD;
+    color: #060f1a;
     text-shadow: 0px 0px 0px black, 1px 1px 0px black, 2px 2px 0px black;
     transition: all 500ms;
     line-height: 90px;

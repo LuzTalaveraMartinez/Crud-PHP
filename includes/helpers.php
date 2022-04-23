@@ -24,6 +24,7 @@ function borrarErrores(){
         $borrado= true;
     }
 
+
     if(isset($_SESSION['errores_categoria'])){
         $_SESSION['errores_categoria'] = null;
         $borrado= true;
